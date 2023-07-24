@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+    --bg-color: #121214;
+
+    --primary-color: #42D3FF;
+    --text-color: #FFFFFF;
+
+    --base-color: 194;
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+
+    display: grid;
+}
+
+main {
+   align-self: flex-end;
+   justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: max-content;
+}
+
+.timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    font-weight: 700;
+    color: var(--text-color);
+
+    display: flex;
+    gap: 0.5rem;
+
+    margin-bottom: 1.6rem;
+}
+
+.controls {
+    padding: 2.2rem 4.4rem;
+    border-radius: 9999px;
+    background: var(--bg-primary-light);
+
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(10rem, 10rem + 30vw, 22.8rem);
+    height: clamp(8rem, 5rem + 10vh ,10.8rem);
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path { /*path é o elemento indexado no svg o qual cria formas, como linhas, curvas e etc*/
+    fill: var(--primary-color); /*fill é a cor de preenchimento de um elemento gráfico*/
+}
+
+
+button svg {
+    width: clamp(5.2rem, 2rem + 12vw, 6.4rem);
+}
+
+footer {
+    justify-self: end;
+    align-self: end;
+    padding: 0 4rem 3.2rem 0;
+}
+
+.hide {
+    display: none;
+}
